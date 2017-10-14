@@ -1,0 +1,6 @@
+D:\Sitecore.Git\Integrations.SharePointIntegrationFramework\code\Sitecore.Sharepoint.Common\obj\Debug\Sitecore.Sharepoint.Common.csproj.CoreCompileInputs.cache
+D:\Sitecore.Git\Integrations.SharePointIntegrationFramework\code\Sitecore.Sharepoint.Web\bin\Sitecore.Sharepoint.Common.dll.config
+D:\Sitecore.Git\Integrations.SharePointIntegrationFramework\code\Sitecore.Sharepoint.Web\bin\Sitecore.Sharepoint.Common.dll
+D:\Sitecore.Git\Integrations.SharePointIntegrationFramework\code\Sitecore.Sharepoint.Web\bin\Sitecore.Sharepoint.Common.pdb
+D:\Sitecore.Git\Integrations.SharePointIntegrationFramework\code\Sitecore.Sharepoint.Common\obj\Debug\Sitecore.Sharepoint.Common.dll
+D:\Sitecore.Git\Integrations.SharePointIntegrationFramework\code\Sitecore.Sharepoint.Common\obj\Debug\Sitecore.Sharepoint.Common.pdb

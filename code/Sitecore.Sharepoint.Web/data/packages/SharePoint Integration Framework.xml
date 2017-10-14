@@ -1,0 +1,959 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>SharePoint Integration Framework</PackageName>
+      <Author>Sitecore A/S</Author>
+      <Version>1.0.0 rev. 110630</Version>
+      <Revision />
+      <License>&lt;div class=WordSection1&gt;  &lt;p class=Default align=center style='margin-bottom:10.0pt;text-align:center'&gt;&lt;b&gt;&lt;span style='font-size:11.5pt'&gt;Sitecore License Agreement&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;LICENSEE’S USE OF THE SITECORE SOFTWARE IS SUBJECT TO LICENSEE’S FULL ACCEPTANCE OF THE TERMS, CONDITIONS, DISCLAIMERS AND LICENSE RESTRICTIONS SET FORTH IN THIS AGREEMENT. &lt;/span&gt;&lt;/b&gt;&lt;/p&gt;  &lt;p class=MsoNormal style='text-align:justify'&gt;&lt;b&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt;1. &lt;u&gt;License Grant&lt;/u&gt;&lt;/span&gt;&lt;/b&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt;: Upon payment in full of the license fee, Licensor grants Licensee a non-exclusive, perpetual, non-transferable, non-assignable, non-sublicensable license, without time limitations, to use the Sitecore Software in supported configurations as described in the Documentation, in compliance with all applicable laws, in object code form only,&lt;/span&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family: "Arial","sans-serif"'&gt; exclusively for the Permitted Usage (as that term is defined in Exhibit A)&lt;/span&gt;&lt;span lang=EN-GB style='font-size:10.0pt; font-family:"Arial","sans-serif"'&gt;, subject to the terms and conditions set forth in this Agreement and Exhibits A and B hereto, which are incorporated herein and made a part of this Agreement.&lt;/span&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt; Except as expressly authorized by this Agreement, “Licensee” as used herein does not include any other entity or person, including any present or future subsidiary or affiliate of Licensee, or any entity or person owning any interest in Licensee at present or in the future.&lt;/span&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family: "Arial","sans-serif"'&gt; “Sitecore Software” means the software that is licensed by Licensor in this Agreement, and any future Upgrades and Patches, as those terms are defined in Section 6 of this Agreement, that the Licensee may receive in accordance with the terms of the Agreement. “Documentation” means the resources made available in the reference section of the Sitecore Developer Network setting forth the then-current functional, operational, and performance capabilities of the Sitecore Software (http://sdn.sitecore.net/documentation).&lt;/span&gt;&lt;/p&gt;  &lt;p class=MsoNormal&gt;&lt;span style='font-size:10.0pt'&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt; margin-left:.3in;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;1.1 License Key&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;: Licensee will be provided a License Key that gives Licensee access to the Sitecore Software. The Sitecore Software may be used only on the equipment with the features and limitations specified in the License Key. The License Key shall be time-limited until full payment of the license fee has been received by Licensor. The License Key may limit the number of installations of the Sitecore Software and the capacity of the Servers on which the Sitecore Software may be installed. For purposes of this Agreement, one Server is defined as a physical or virtual Server with a processing power for the web process equivalent to at most eight CPU cores. For example, one physical Server may contain eight single-core CPUs, four dual-core CPUs, two quad-core CPUs or one eight-core CPU. A Server with three or four quad-core CPUs would therefore count as two Servers.&lt;/span&gt;&lt;b&gt; &lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;A virtual server’s processing power will be counted as the number of physical cores allocated or processor core equivalents allocated to the virtual server.&amp;nbsp; For example, one virtual server with two physical processor cores allocated, or with the equivalent of two simulated processor cores allocated, would be counted as the equivalent of two CPU cores and therefore one Server.&lt;/span&gt;&lt;span style='font-size:10.0pt'&gt; &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt; margin-left:.3in;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;1.2 Intellectual Property Rights&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;: The &lt;/span&gt;&lt;span lang=EN-GB style='font-size:10.0pt'&gt;Sitecore Software includes the following patents: U.S. Patent Nos. 7,856,345 and 8,255,526. &lt;/span&gt;&lt;span style='font-size:10.0pt'&gt;Ownership of the Sitecore Software, and all worldwide rights, title and interest in and to the Intellectual Property associated with the Sitecore Software shall remain solely and exclusively with Licensor or with third parties that license modules included with the Sitecore Software. Licensee shall retain intact all applicable Licensor copyright, patent and/or trademark notices on and in all copies of the Sitecore Software. All rights, title, and interest in Sitecore Software not expressly granted to Licensee in this Agreement are reserved by Licensor. “Intellectual Property” as used in this Agreement means any and all patents, copyrights, trademarks, service marks and trade names (registered and unregistered), trade secrets, know-how, inventions, licenses and all other proprietary rights throughout the world related to the authorship, origin, design, utility, process, manufacture, programming, functionality and operation of Sitecore Software and its Derivative Works. &lt;/span&gt;&lt;/p&gt;  &lt;p class=MsoNormal style='margin-left:.3in;text-align:justify'&gt;&lt;b&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt;1.3 Confidential Information&lt;/span&gt;&lt;/b&gt;&lt;span lang=EN-GB style='font-size:10.0pt; font-family:"Arial","sans-serif"'&gt;:&lt;b&gt; &lt;/b&gt;&lt;/span&gt;&lt;b&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt; &lt;/span&gt;&lt;/b&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt;The term “Confidential Information” shall include any information, whether tangible or intangible, including, but not limited to, techniques, discoveries, inventions, ideas, processes, software (in source or object code form), designs, technology, technical specifications, flow charts, procedures, formulas, concepts, any financial data, and all business and marketing plans and information, in each case which is maintained in confidence by the disclosing party (“Disclosing Party”) and disclosed to the other party (“Recipient”) hereunder. The failure by the Disclosing Party to designate any tangible or intangible information as Confidential Information shall not give Recipient the right to treat such information as free from the restrictions imposed by this Agreement if the circumstances would lead a reasonable person to believe that such information is Confidential Information. Confidential Information does not include information which Recipient documents (a) is now, or hereafter becomes, through no act or failure to act on the part of Recipient, generally known or available to the public; (b) was rightfully in Recipient’s possession prior to disclosure by the Disclosing Party; (c) becomes rightfully known to Recipient, without restriction, from a source other than the Disclosing Party and without any breach of duty to the Disclosing Party;&amp;nbsp; (d) is developed independently by Recipient without use of or reference to any of the Confidential Information and without violation of any confidentiality restriction contained herein; or (e) is approved by the Disclosing Party for disclosure without restriction, in a written document executed by a duly authorized officer of the Disclosing Party. Recipient shall hold the Confidential Information received from the Disclosing Party in strict confidence and shall not, directly or indirectly, disclose it, except as expressly permitted herein. Recipient shall promptly notify the Disclosing Party upon learning of any misappropriation or misuse of Confidential Information disclosed hereunder. Notwithstanding the foregoing, Recipient shall be permitted to disclose Confidential Information pursuant to a judicial or governmental order, provided that Recipient provides the Disclosing Party reasonable prior notice, and assistance, to contest such order.&lt;/span&gt;&lt;/p&gt;  &lt;p class=MsoNormal style='text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt; font-family:"Arial","sans-serif"'&gt;&amp;nbsp;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;  &lt;p class=Default style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt; margin-left:.3in;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt; color:windowtext'&gt;1.4 Restrictions on Use&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size: 10.0pt;color:windowtext'&gt;: Except as expressly authorized by applicable law or by Licensor in writing, Licensee shall not copy, in whole or in part, the Sitecore Software or Documentation, or modify, disassemble, decompress, reverse compile, reverse assemble, reverse engineer, or translate any portion of the Sitecore Software. Licensee shall not rent, lease, lend, distribute, sell, assign, license, or otherwise transfer the Sitecore Software, or create Derivative Works of the Sitecore Software. Additionally, Licensee may use embedded third-party components in the Sitecore Software exclusively &lt;/span&gt;&lt;span style='font-size:10.0pt'&gt;as described in the OEM section of the Sitecore Developer &lt;/span&gt;&lt;span style='font-size:10.0pt;color:windowtext'&gt;Network (&lt;/span&gt;&lt;a href="http://sdn.sitecore.net/oem"&gt;&lt;span style='font-size:10.0pt;color:windowtext; text-decoration:none'&gt;http://sdn.sitecore.net/oem&lt;/span&gt;&lt;/a&gt;&lt;span style='font-size:10.0pt;color:windowtext'&gt;).&lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt; margin-left:.3in;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt; color:windowtext'&gt;1.5  Derivative Works&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt; color:windowtext'&gt;:&lt;b&gt; &lt;/b&gt;&lt;/span&gt;&lt;span style='font-size:10.0pt;color:windowtext'&gt;“Derivative Works” as used herein means any software program &lt;/span&gt;&lt;span style='font-size: 10.0pt'&gt;(whether in source code or object code), and all copies thereof, developed by or on behalf of Licensee based on or derived from any part of the Sitecore Software, including without limitation any revision, modification, enhancement, translation (including compilation or recapitulation by computer), abridgment, condensation, expansion, or any other form in which the Sitecore Software may be recast, transformed or adapted, and that, if prepared without Licensor's authorization, would constitute a patent, copyright or trade secret infringement of the Sitecore Software, or would otherwise constitute an unauthorized use of Licensor’s Confidential Information. In the event any such Derivative Works are created, Licensor shall own all right, title, and interest in and to such Derivative Works. If, under the operation of local law or otherwise, Licensee or such third party comes to have any rights associated with such Derivative Works, Licensee hereby and shall automatically assign all such rights to Licensor for no additional consideration. For avoidance of doubt, Licensor shall claim no intellectual property interest or legal interest of any kind in any code created by Licensee to facilitate its authorized use of the Sitecore Software so long as the creation of such code does not constitute a Derivative Work or violate any other provision of this Agreement. &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt; margin-left:.3in;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;1.6 Third Party Use and Rights&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;:&lt;b&gt; &lt;/b&gt;&lt;/span&gt;&lt;span style='font-size:10.0pt'&gt;Licensee may authorize third parties to assist Licensee in the management, editing, and hosting of web-based content created by use of the Sitecore Software, provided that: (1) such activities are within the scope of the activities Licensee is itself authorized to perform under this Agreement; (2) such third party’s acts are primarily for the direct or indirect benefit of Licensee; and (3) such third parties are not charged a fee by Licensee for such activities. Licensee is prohibited from using the Sitecore Software as an Application Software Provider or in any time-sharing or other commercial arrangement of any kind that makes the Sitecore Software available to third parties primarily for the third party’s own uses. Except as expressly stated in this Agreement, no third party has any rights under this Agreement. Licensee is fully liable to the extent allowed by law for any unauthorized use of the Sitecore Software by third parties caused by any acts or omissions of Licensee. &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt; margin-left:.3in;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;1.7 License Verification&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;: The Sitecore Software periodically transmits the following information to a server maintained by Licensor: License Key ID, licensee name, hostname (Licensee’s website URL), host IP, Sitecore Software version, and directory installation path. This information is used by Licensor to send periodic communications to Licensee relevant to use of the Sitecore Software, and to verify, at Licensor’s election, that the Sitecore Software is installed in accordance with the terms of this Agreement. &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;span style='font-size:10.0pt'&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;  &lt;p class=MsoNormal&gt;&lt;b&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family: "Arial","sans-serif"'&gt;2&lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;span lang=EN-GB style='font-size:10.0pt'&gt;. &lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;u&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt;Limited Warranties&lt;/span&gt;&lt;/u&gt;&lt;/b&gt;&lt;span lang=EN-GB style='font-size:10.0pt'&gt;: &lt;/span&gt;&lt;/p&gt;  &lt;p class=MsoNormal&gt;&lt;span lang=EN-GB style='font-size:10.0pt'&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt; margin-left:22.5pt;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;2.1 Licensor’s Limited Warranty&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;: Licensor expressly warrants that the Sitecore Software provided to Licensee will work for a period of ninety (90) days following the effective date of this Agreement according to the Documentation. In the event any such Sitecore Software does not operate according to the Documentation during this Limited Warranty Period, Licensor shall repair or replace the Sitecore Software and such repair or replacement shall be Licensee’s sole and exclusive remedy.  &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-top:0in;margin-right:0in;margin-bottom:10.0pt; margin-left:22.5pt;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;2.2&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt; &lt;b&gt;&lt;span lang=EN-GB&gt;Virus/Malicious Code Warranty&lt;/span&gt;&lt;/b&gt;&lt;span lang=EN-GB&gt;: &lt;/span&gt;&lt;/span&gt;&lt;span style='font-size:10.0pt'&gt;Licensor and Licensee warrant that they will use commercially reasonable virus and malicious code detection software programs to test any electronic files, including electronic communications, prior to any delivery or upon receiving such communications and that the parties will continue to take such steps with respect to exchanging electronic files and communications pursuant to this Agreement. In the event either party detects any computer virus or malicious code it shall immediately notify the other party and where possible shall promptly provide revised replacement files in the event any such computer virus or malicious code is detected.&lt;/span&gt;&lt;/p&gt;  &lt;p class=MsoNormal style='text-align:justify'&gt;&lt;b&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt;3. &lt;u&gt;DISCLAIMER OF WARRANTIES&lt;/u&gt;: EXCEPT AS EXPRESSLY SET FORTH IN SECTION 2 ABOVE, THE SITECORE SOFTWARE AND THE DOCUMENTATION ARE SUPPLIED TO LICENSEE &amp;quot;AS IS.” LICENSOR (DEFINED IN THIS SECTION AS LICENSOR’S PARENT, AFFILIATES, SUBSIDIARIES, DISTRIBUTORS AND THEIR RESPECTIVE OFFICERS, DIRECTORS AND EMPLOYEES) MAKES NO WARRANTY, EXPRESS OR IMPLIED, AS TO THE SITECORE SOFTWARE, THE DOCUMENTATION, THE OPERATION OF THE SITECORE SOFTWARE, OR ANY OTHER GOODS OR SERVICES RENDERED BY LICENSOR TO LICENSEE, INCLUDING BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, PERFORMANCE, ACCURACY, NON-INFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE AND ALL WARRANTIES ARISING FROM COURSE OF DEALING OR USAGE OF TRADE, EXCEPT TO THE EXTENT ANY WARRANTIES IMPLIED BY LAW CANNOT BE WAIVED. LICENSOR EXPRESSLY DISCLAIMS ANY AND ALL EXPRESS, IMPLIED OR STATUTORY WARRANTIES THAT THE SITECORE SOFTWARE WILL RUN PROPERLY ON ANY HARDWARE, THAT THE SITECORE SOFTWARE WILL MEET LICENSEE’S REQUIREMENTS OR OPERATE IN THE COMBINATIONS WHICH MAY BE SELECTED FOR USE BY LICENSEE, OR THAT THE OPERATION OF THE SITECORE SOFTWARE WILL BE UNINTERRUPTED OR ERROR FREE, OR THAT ALL ERRORS WILL BE CORRECTED. LICENSOR MAKES NO EXPRESS OR IMPLIED WARRANTY OF ANY KIND REGARDING ANY SEPARATELY LICENSED SOFTWARE THAT MAY BE USED WITH THE SITECORE SOFTWARE.&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;  &lt;p class=MsoNormal style='text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt; font-family:"Arial","sans-serif";color:black'&gt;&amp;nbsp;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;4. &lt;u&gt;LIMITATION OF LIABILITY&lt;/u&gt;: LICENSOR (DEFINED IN THIS SECTION AS LICENSOR’S PARENT, AFFILIATES, SUBSIDIARIES, DISTRIBUTORS AND THEIR RESPECTIVE OFFICERS, DIRECTORS AND EMPLOYEES) SHALL NOT BE LIABLE TO LICENSEE OR ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT UNDER ANY LEGAL THEORY, INCLUDING BUT NOT LIMITED TO, LOST PROFITS, LOST DATA OR BUSINESS INTERRUPTION, THE COST OF RECOVERING ANY DATA, INFRINGEMENT, OR THE COST OF SUBSTITUTE SOFTWARE, EVEN IF LICENSOR HAS BEEN ADVISED OF, KNOWS OF, OR SHOULD HAVE KNOWN, OF THE POSSIBILITY OF SUCH DAMAGES. LICENSOR’S AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE AMOUNT OF FEES (NOT INCLUDING MAINTENANCE PROGRAM CHARGES) PAID BY LICENSEE FOR USE OF THE SITECORE SOFTWARE UNDER THIS AGREEMENT. LICENSOR WILL NOT BE LIABLE FOR DELAYS OR FAILURES IN PERFORMANCE OF THE SUPPORT OR ANY OTHER SERVICES CAUSED BY FORCES BEYOND ITS CONTROL OR ANY FORCE MAJEURE EVENT SUCH AS ACT OF TERRORISM, LOSS OF POWER, ACT OF GOD, OR SIMILAR OCCURRENCE. THE LIMITATION PROVISIONS OF THIS SECTION SHALL BE APPLICABLE TO ANY CLAIM FILED BY LICENSEE ARISING OUT OF OR RELATING TO ANY SEPARATELY LICENSED SOFTWARE THAT MAY BE USED WITH THE SITECORE SOFTWARE.&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;  &lt;p class=MsoNormal style='text-align:justify'&gt;&lt;b&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt;5. &lt;u&gt;Sitecore Maintenance Program&lt;/u&gt;&lt;/span&gt;&lt;/b&gt;&lt;span lang=EN-GB style='font-size:10.0pt; font-family:"Arial","sans-serif"'&gt;:&lt;/span&gt;&lt;span lang=EN-GB style='font-size: 10.0pt;font-family:"Arial","sans-serif"'&gt; Licensee will automatically be enrolled in the Sitecore Maintenance Program. For each Maintenance Program Period (as that term is defined in Exhibit A) Licensee will be charged a non-refundable Maintenance Program Charge (as that term is defined in Exhibit A). The Sitecore Maintenance Program includes Upgrades and support.&amp;nbsp;Upgrades are free of charge for as long as Licensee is enrolled in the Maintenance Program. Three years after the date of the initial purchase and each three-year anniversary thereafter, Licensor may adjust the Maintenance Program Charge then in effect for all software purchased under this Agreement to 20% of the Licensor’s then-current retail prices.&amp;nbsp;Licensee may cancel the Maintenance Program by providing Licensor with 60 days notice prior to the end of any Maintenance Program Period.&amp;nbsp;Licensor may cancel the Maintenance Program upon Licensee’s failure to pay timely any applicable Maintenance Program Charge. A cancelled Maintenance Program may not be renewed except upon payment of double the amount of fees that would have been paid during the lapsed period.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;  &lt;p class=MsoNormal style='text-align:justify'&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:"Arial","sans-serif"'&gt; &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;6. &lt;u&gt;Upgrades and Patches of Sitecore Software&lt;/u&gt;&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;: “Patch” as used in this Agreement means a specific, targeted fix to a discrete problem in the use or functionality of the Sitecore Software that Licensor in its sole discretion defines to constitute a “Patch” and may from time to time provide to Licensee. “Upgrade” as used in this Agreement means a new version of some or all of the Sitecore Software, or an improvement in the use or functionality of the Sitecore Software more substantial than a Patch, that Licensor in its sole discretion defines to constitute an “Upgrade” and may from time to time provide to Licensees enrolled in the Sitecore Maintenance program. Licensee expressly acknowledges that Upgrades and Patches may change functionality of the Sitecore Software and integration with other systems, and may not work with some or all of the Sitecore Software modules, or be backward compatible with earlier versions of Sitecore Software. Installation of Patches and Upgrades is the choice and responsibility of Licensee. To the extent that operation of the Sitecore Software is affected by problems in standard software, including, but not limited to, Microsoft Internet Explorer, Windows and the Microsoft.Net Framework, then Licensee shall install updates to such standard software per Licensor’s specifications in order to resolve these issues. Licensor has no control over such standard software, and cannot assure that problems with such standard software will be corrected, or that such corrections will be made in a timely manner. &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;7.  &lt;u&gt;Waivers&lt;/u&gt;&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size: 10.0pt'&gt;: All waivers must be in writing and signed by authorized representatives of the parties. Any waiver or failure to enforce any provision of this Agreement on one occasion shall not be deemed a waiver of any other provision or of such provision on any other occasion. &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;8.  &lt;u&gt;Severability&lt;/u&gt;&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;: If any provision of this Agreement is adjudicated to be unenforceable, such provision shall be deemed changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions shall continue in full force and effect. &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;9.  &lt;u&gt;Assignment&lt;/u&gt;&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;: Licensee may not assign this Agreement, by operation of law or otherwise, which includes any change of control in the ownership structure of Licensee. Licensor may assign this Agreement to a successor (whether by merger, a sale of all or a significant portion of its assets, a sale of a controlling interest of its capital stock, or otherwise) that agrees to assume Licensor’s obligations under this Agreement. Any attempted assignment or transfer in violation of this Section shall be void and of no force or effect. Subject to the provisions of this Section 9, this Agreement shall be binding upon the successors and assigns of the parties. &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;b&gt;&lt;span style='font-size:10.0pt'&gt;10. &lt;u&gt;Entire Agreement&lt;/u&gt;&lt;/span&gt;&lt;/b&gt;&lt;span style='font-size:10.0pt'&gt;: This Agreement, and any attachment that is expressly incorporated in this Agreement, constitutes the entire agreement between the parties regarding the subject matter hereof and supersedes all prior or contemporaneous agreements, understandings and communications, whether written or oral. This Agreement may be amended only by a written document signed by both parties. In the event of a conflict between any provision of this Agreement with any other attachment or document, this Agreement shall control. Any term or condition not specifically &lt;/span&gt;&lt;span style='font-size:10.0pt; color:windowtext'&gt;authorized by this Agreement included in any Licensee invoice, purchase order or other document rendered pursuant to this Agreement is of no force or effect unless the specific term or condition has been previously agreed to by the parties in writing in a separate agreement. No action by Licensor (including, without limitation, receipt of payment of any such invoice, or acceptance of any purchase order, in whole or in part) shall be construed as making any such term or condition binding on Licensor. &lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;span style='font-size:7.0pt'&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;  &lt;p class=Default style='margin-bottom:10.0pt;text-align:justify'&gt;&lt;span style='font-size:7.0pt'&gt;Sitecore License Agreement. July 1, 2013&lt;/span&gt;&lt;/p&gt;  &lt;/div&gt;</License>
+      <Comment />
+      <Attributes />
+      <Readme> During installation of the SharePoint Integration Framework
+a new base template is added to the File template. If you 
+have customized the File template in any way, check after 
+installation that your customizations have not been 
+overwritten.
+	  
+Page Level Integration requires ScriptManager on your layout. 
+To ensure that it appears on your page layout, add the 
+following line to the layout aspx file:
+  &lt;asp:ScriptManager ID="spListScriptManager" runat="server"/&gt;
+
+See the documentation for additional configuration of IIS to integrate with SharePoint Online.  
+  
+NOTE: As a part of installation process the module installs 
+localizaions based on Client Languages (stored in core database). 
+</Readme>
+      <Publisher>Sitecore A/S</Publisher>
+      <PostStep>Sitecore.Sharepoint.Installer.PostStepActions, Sitecore.Sharepoint.Installer</PostStep>
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <items>
+      <Database>master</Database>
+      <Root>{16B9974E-5C3F-4A45-859F-B22A6FA7FADF}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Sample Sharepoint Lists Items</Name>
+    </items>
+    <items>
+      <Database>master</Database>
+      <Root>{83FCC10D-F60D-4976-8686-7E6FF4703F08}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Sample Sharepoint Libraries Items</Name>
+    </items>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/layout/Sublayouts/Sharepoint/Sharepoint Announcements/{EAC6145B-6F37-434B-96C1-40502C4B9F02}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Sublayouts/Sharepoint/Sharepoint List/{BA62BB34-53F8-4AEB-AFF9-BA2CCB6FA109}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Sublayouts/Sharepoint/Sharepoint Search/{1549596B-13DF-462E-91F9-25C51EC0EB89}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Sublayouts/Sharepoint/Sharepoint Tasks/{2E1D0C9B-C196-4E99-ADCE-3E7921A6AF1B}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Layout Items</Name>
+    </xitems>
+    <items>
+      <Database>master</Database>
+      <Root>{BB56F594-E3F0-4905-BB14-0D175BD42D9C}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Module Items</Name>
+    </items>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/system/Tasks/Commands/Sharepoint Blob Synchronization/{C4137046-B9E8-4340-8873-DFA54697DE24}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Tasks/Schedules/Sharepoint Blob Synchronization/{3802FE0F-815A-4501-8540-DE64F8B40E98}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Sharepoint Blob Synchronization Task Items</Name>
+    </xitems>
+    <items>
+      <Database>master</Database>
+      <Root>{6495E392-320D-4F95-91C0-CCFC783E999C}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Item Level Integration Templates Items</Name>
+    </items>
+    <items>
+      <Database>master</Database>
+      <Root>{F1E24560-BEFA-4C2D-AEA1-11376ECB526C}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Page Level Integration Base Templates Items</Name>
+    </items>
+    <items>
+      <Database>master</Database>
+      <Root>{9512A081-F14E-49C2-96B0-8E45F1F63D27}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Sharepoint Sublayout Parameters Template Items</Name>
+    </items>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/Sharepoint/Page Level Integration/Sharepoint Web/{32D3E6C7-5C52-4E0E-9901-4234AB1C9347}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Template Items</Name>
+    </xitems>
+    <items>
+      <Database>core</Database>
+      <Root>{4CEFDA9B-66DD-4E0C-BB8D-F07E2DF76FA7}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Hidden Text Field Type Item</Name>
+    </items>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/Sharepoint/Sitecore.Sharepoint.config</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Config Files</Name>
+    </xfiles>
+    <xfiles>
+      <Entries>
+        <x-item>/css/sharepoint.css</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Css Files</Name>
+    </xfiles>
+    <xfiles>
+      <Entries>
+        <x-item>/layouts/Sharepoint/SharepointAnnouncements.ascx</x-item>
+        <x-item>/layouts/Sharepoint/SharepointList.ascx</x-item>
+        <x-item>/layouts/Sharepoint/SharepointSearch.ascx</x-item>
+        <x-item>/layouts/Sharepoint/SharepointTasks.ascx</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Layout Files</Name>
+    </xfiles>
+    <xfiles>
+      <Entries>
+        <x-item>/script/jquery.hoverIntent.minified.js</x-item>
+        <x-item>/script/sharepoint.js</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Script Files</Name>
+    </xfiles>
+    <xfiles>
+      <Entries>
+        <x-item>/sitecore/Images/disableScreen.png</x-item>
+        <x-item>/sitecore/Images/fader.png</x-item>
+        <x-item>/sitecore/Images/gridheadbg_blue.png</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Image Files</Name>
+    </xfiles>
+    <files>
+      <Root>/sitecore/shell/Applications/Sharepoint</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include>
+        <FileNameFilter>
+          <Pattern>*.css</Pattern>
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>Sharepoint Applications Css Files</Name>
+    </files>
+    <files>
+      <Root>/sitecore/shell/Applications/Sharepoint</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include>
+        <FileNameFilter>
+          <Pattern>*.js</Pattern>
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>Sharepoint Applications Script Files</Name>
+    </files>
+    <files>
+      <Root>/sitecore/shell/Applications/Sharepoint</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include>
+        <FileNameFilter>
+          <Pattern>*.xml</Pattern>
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>Sharepoint Applications Xml Files</Name>
+    </files>
+    <xfiles>
+      <Entries>
+        <x-item>/bin/Sitecore.Sharepoint.Common.dll</x-item>
+        <x-item>/bin/Sitecore.Sharepoint.Data.Providers.dll</x-item>
+        <x-item>/bin/Sitecore.Sharepoint.Data.WebServices.dll</x-item>
+        <x-item>/bin/Sitecore.Sharepoint.ObjectModel.dll</x-item>
+        <x-item>/bin/Sitecore.Sharepoint.Web.dll</x-item>
+        <x-item>/bin/Sitecore.Sharepoint.Installer.dll</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Dlls</Name>
+    </xfiles>
+    <items>
+      <Database>master</Database>
+      <Root>{50DE4F8B-49D9-43B4-A645-1CDB6A79A311}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name>Sharepoint Search Parameters Templates</Name>
+    </items>
+    <xfiles>
+      <Entries>
+        <x-item>/Images/topsearchbutton.gif</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Images</Name>
+    </xfiles>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/layout/Sublayouts/Sharepoint/{BFFA1D01-5144-42D1-9F67-41E88385AF71}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Sharepoint/{FD940042-C9FB-46AB-BE4C-970EF91B1FED}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Sharepoint/Page Level Integration/{BB45BD32-768E-45DD-A5F5-7D76A33039A0}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Merge</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Additional folders</Name>
+    </xitems>
+    <files>
+      <Root>/temp/SPIF translations</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Overwrite</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include>
+        <FileNameFilter>
+          <Pattern>*.xml</Pattern>
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>TranslationFiles</Name>
+    </files>
+	<files>
+      <Include>
+        <FileNameFilter>
+          <Pattern />
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>Azure SCOM libs</Name>
+      <Root>/App_Data/AzureOverrideFiles/bin</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+    </files>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

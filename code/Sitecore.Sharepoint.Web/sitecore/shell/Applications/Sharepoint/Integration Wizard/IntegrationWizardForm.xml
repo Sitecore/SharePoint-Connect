@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <Sharepoint.IntegrationWizard>
+    <link href="/sitecore/shell/Applications/Sharepoint/Integration Wizard/IntegrationWizardForm.css" rel="stylesheet" type="text/css" />
+    <Script Src="/sitecore/shell/Applications/Sharepoint/Integration Wizard/IntegrationWizardForm.js" />
+
+    <WizardForm Application="Tools/Installer/InstallationWizard" CodeBeside="Sitecore.Sharepoint.Web.Shell.Applications.IntegrationWizard.IntegrationWizardForm,Sitecore.Sharepoint.Web">
+      <WizardFormPage ID="ConnectToSharePoint" Header="Connect to a SharePoint site" Text="Enter the URL of the SharePoint site that you want to connect to and select the configuration that you want to use" Icon="Business/32x32/data_connection.png">
+        <WizardFormIndent>
+          <Literal class="scFieldLabel" Text="SharePoint site URL:"/>
+          <Edit ID="server" onkeyup="UpdateInfo();" onpaste="UpdateInfo();" Value=""/>
+
+          <Literal class="scFieldExample" Text="Examples:" />
+          <Border class="examplesListBlock">
+            <ul>
+              <li>
+                <Literal Text="http(s)://server"/>
+              </li>
+              <li>
+                <Literal Text="http(s)://server/web"/>
+              </li>
+              <li>
+                <Literal Text="http(s)://server/web/subweb"/>
+              </li>
+            </ul>
+          </Border>
+
+          <Border Class="configurationBlock">
+            <Border ID="notPredefinedConfigurationInfo">
+              <ThemedImage Src="Applicationsv2/24x24/scroll_information.png"/>
+              <Literal Text="The predefined configuration could not be found. The default configuration will be used to access the SharePoint site."/>
+            </Border>
+            <Border ID="predefinedConfigurationInfo" style="display: none;">
+              <ThemedImage Src="ApplicationsV2/24x24/scroll_ok.png"/>
+              <Literal Text="The predefined configuration has been found and will be used to access the SharePoint site."/>
+            </Border>
+            <Border style="margin-top: 24px">
+              <Literal Text="To use a different configuration, select Manual configuration and enter the appropriate details."/>
+            </Border>
+            <Radiogroup ID="Creds">
+              <Literal Text="SharePoint configuration"/>
+              <Border/>
+              <RadioItem Header="Default" ID="defaultCredentials" Checked="true" Value="off" onclick="switchToDefCredentials();"/>
+              <Border/>
+              <RadioItem Header="Manual" ID="alternativeCredentials" Checked="false" Value="2" onclick="switchToAltCredentials();"/>
+
+              <Border ID="alternativeCredentialsBlock" style="display: none;">
+                <div id="manualSettings">
+                  <div>
+                    <Checkbox ID="isCredentials" Checked="true" onclick="SetDivVisibility('credentialsOptions', this.checked);" Header="Use different credentials" />
+                  </div>
+                  <div id="credentialsOptions">
+                    <GridPanel class="scFormTable" Columns="2" CellPadding="2" Width="100%">
+                      <Literal Text="Login:" GridPanel.NoWrap="true"/>
+                      <Edit ID="userName" onkeyup="UpdateInfo();" onpaste="UpdateInfo();"/>
+                      <Literal Text="Password:"/>
+                      <Edit ID="pwd" Password="true"/>
+                    </GridPanel>
+                  </div>
+
+                  <div style="padding:5px 0px">
+                    <Checkbox ID="isAdvanced" onclick="SetDivVisibility('advancedOptions',this.checked);" Header="Use a different connection configuration" />
+                  </div>
+                  <div id="advancedOptions" style="display: none;">
+                    <Combobox ID="configuration" onchange="UpdateInfo();"/>
+                  </div>
+                </div>
+              </Border>
+              <GridPanel Columns="2" Margin="8px 0px 0px 0px" Width="100%">
+                <GridPanel Columns="2" class="configurationResult">
+                  <Literal ID="currentUserText" Text="Login:"/>
+                  <Literal ID="currentUser" Text=""/>
+                  <Literal ID="currentConfigurationText" Text="Connection configuration:"/>
+                  <Literal ID="currentConfiguration" Text=""/>
+                </GridPanel>
+                <Button ID="Test" Header="Test connection" Click="spintegration:testconnection"/>
+              </GridPanel>
+            </Radiogroup>
+          </Border>
+          <Edit ID="knownServers" Visible="false"/>
+          <Edit ID="defaultUser" Visible="false"/>
+          <Edit ID="defaultConfiguration" Visible="false"/>
+
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="ConnectToSp" Header="Communicating with SharePoint server" Text="This may take a few minutes." Icon="network/32x32/server_connection.png">
+        <Border class="scWizardProgressPage">
+          <ThemedImage class="scSpinner" Src="Images/ProgressIndicator/sc-spinner32.gif" />
+          <Border ID="PublishingText">
+            <Literal class="scFieldLabel scActionText" Text="Communicating with SharePoint server..."/>
+          </Border>
+        </Border>
+      </WizardFormPage>
+
+      <WizardFormPage ID="ListSelectorPage" Header="Select a SharePoint list" Text="The contents of the SharePoint list are recreated as Sitecore items." Icon="business/32x32/data_scroll.png">
+        <WizardFormIndent>
+          <Literal Text="Select the list that you want to integrate with Sitecore."/>
+          <Border Width="100%" Height="90%">
+            <Listbox ID="listSelector" Width="100%" Height="90%" DblClick="Next" Change="listSelector_OnChange" >
+            </Listbox>
+          </Border>
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="ViewSelectorPage" Header="Select a view" Text="The view is used to select the SharePoint items that are recreated as items in Sitecore." Icon="applications/32x32/scroll_view.png">
+        <WizardFormIndent>
+          <Literal Text="Select the view that you want to integrate with Sitecore."/>
+          <Border Width="100%" Height="90%">
+            <Listbox ID="viewSelector" Width="100%" Height="90%" DblClick="Next">
+            </Listbox>
+          </Border>
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="ExistentMappingsPage" Header="Integration Mapping Templates" Text="Create a new mapping template or use an existing one." Icon="software/32x32/components.png">
+        <WizardFormIndent>
+           <Radiogroup ID="mappingsSelectionGroup">
+            <Literal Text="Select mapping creation method." />
+            <Border/>
+            <RadioItem Header="Create a new mapping template" ID="createNewMapping" Checked="true" onclick="return createNewMappingRadioClick(this);"/>
+            <Border/>
+            <RadioItem Header="Use an existing mapping template" ID="useExistentMapping" Checked="false" onclick="return existingMappingRadioClick(this);"/>
+            <Border>
+              <Listbox ID="mappingSelector" Width="100%" Change="MappingSelectionChanged" onclick="return mappingSelectorFocus();" onkeydown="return mappingSelectorFocus();" DblClick="Next" >
+              </Listbox>
+              <Literal Text="Mappings:" />
+              <Groupbox Width="100%" style="margin: 0px;">
+                <div class="mappingInfoPanelWrapper">
+                <Border Class="mappingsInfoLabel">
+                    <Literal Text="Mapping is not selected"></Literal>
+                </Border>
+                </div>
+                <div class="mappingInfoPanelWrapper">
+                <Border class="mappingInfoPanelContainer">
+                  <GridPanel Columns="2" ID="mappingInfoPanel" style="width: 100%;">
+                    <Literal Text=""></Literal>
+                  </GridPanel>
+                </Border>
+              </div>
+              </Groupbox>
+              <div class="charCounter">char counter</div>
+            </Border>
+          </Radiogroup>
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="MappingPage" Header="Map integration fields" Text="Select the SharePoint fields that you want to map to Sitecore fields." Icon="Applicationsv2/32x32/signpost.png">
+        <WizardFormIndent>
+          <Literal Text="Select the fields that you want to map."/>
+          <Border Margin="20px 0px 0px 0px" >
+              <div class="fields">
+                <div class="fieldWrapper">
+                    <Literal Text="SharePoint:"/>
+                </div>
+                <div class="fieldWrapper">
+                    <Literal Text="Sitecore:"/>
+                </div>
+              </div>
+          </Border>
+          <div class="mappingContainerWrapper">
+              <Scrollbox ID="mappingContainer" Padding="4px" Background="transparent" onmouseover="return mappingContainerMouseOver(this)">
+              </Scrollbox>
+          </div>
+          <Button ID="addField" Click="spintegration:addmapping()" Header="Add mapping"/>
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="AdvancedSettings" Header="Advanced settings" Text="Use these settings to change or optimize the integration items." Icon="Software/32x32/component_preferences.png">
+        <WizardFormIndent>
+
+          <GridPanel Columns="3" Class="advancedSettings">
+            <Literal Text="Item name:"/>
+            <Edit ID="itemName"  Change="ProcessValidationAdvancedSettings"/>
+            <Label ID="itemNameValidationMark" Header="*" Visible="false" HeaderStyle="color:red"/>
+
+            <Literal Text="Template name:"/>
+            <Edit ID="templateName" Value="TemplateName"  Change="ProcessValidationAdvancedSettings"/>
+            <Label ID="templateNameValidationMark" Header="*" Visible="false" HeaderStyle="color:red"/>
+            <Literal GridPanel.colspan="3" Text="" ID="templateAdditionalInfo"/>
+
+            <Literal Text="Scheduled BLOB transfer:"/>
+            <Checkbox GridPanel.colspan="2" ID="scheduledBlobTransferEnabled"/>
+
+            <Literal Text="Expiration interval:"/>
+            <Edit ID="expiration" Value="3600"  Change="ProcessValidationAdvancedSettings"/>
+            <Label ID="expirationValidationMark" Header="*" Visible="false" HeaderStyle="color:red"/>
+
+            <Literal Text="Item limit:"/>
+            <Edit ID="itemLimit" Value="100"  Change="ProcessValidationAdvancedSettings"/>
+            <Label ID="itemLimitValidationMark" Header="*" Visible="false" HeaderStyle="color:red"/>
+
+            <Literal Text="Bidirectional link:"/>
+            <Checkbox GridPanel.colspan="2" ID="updateSharepoint" Value="1"/>
+          </GridPanel>
+
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage ID="Confirmation" Header="Confirmation" Text="Ensure that the information is correct and then click Create." Icon="SoftwareV2/32x32/component_blue_preferences.png" Next="">
+        <WizardFormIndent>
+          <GridPanel Columns="2" class="confirmation">
+            <Literal Text="SharePoint Site:"/>
+            <Literal ID="confirmSite" Class="confirmation"/>
+
+            <Literal Text="SharePoint List:"/>
+            <Literal ID="confirmList" Class="confirmation"/>
+
+            <Literal Text="SharePoint View:"/>
+            <Literal ID="confirmview" Class="confirmation"/>
+
+            <Literal Text="SharePoint User:"/>
+            <Literal ID="confirmUserName" Class="confirmation"/>
+
+            <Literal Text="Connection Configuration:"/>
+            <Literal ID="confirmConfiguration" Class="confirmation"/>
+
+            <Literal Text="Template Name:"/>
+            <Literal ID="confirmTemplate" Class="confirmation"/>
+
+            <Literal Text="Mappings:"/>
+            <Literal ID="confirmMappings" Class="confirmation"/>
+
+            <Literal Text="Scheduled BLOB Transfer:"/>
+            <Literal ID="confirmScheduledBlobTransfer" Class="confirmation"/>
+
+            <Literal Text="Expiration Interval:"/>
+            <Literal ID="confirmExpiration" Class="confirmation"/>
+
+            <Literal Text="Item Limit:"/>
+            <Literal ID="confirmLimit" Class="confirmation"/>
+
+            <Literal Text="Bidirectional Link:"/>
+            <Literal ID="confirmSharepointUpdate" Class="confirmation"/>
+          </GridPanel>
+        </WizardFormIndent>
+      </WizardFormPage>
+
+      <WizardFormPage Header ="Integration wizard" ID="LastPage">
+        <WizardFormPadding>
+          <Border ID="SuccessMessage">
+            <Literal class="sc-text-largevalue" Text="The SharePoint integration item has been successfully created."/>
+
+            <Border Margin="10px 0px 0px 0px">
+              <Checkbox ID="waitSyncIntegration" Header="Wait until all the items are downloaded it may take a few minutes." Value="1" />
+            </Border>
+          </Border>
+
+          <Border ID="ErrorMessage" Padding="0px 0px 0px 20px" Style="display:none;">
+            <Literal class="sc-text-largevalue" Text="The installation failed for the following reason:" />
+
+            <GridPanel Fixed="true" Style="margin-right:0;width:auto;">
+              <Border Style="font-weight:bold;word-wrap:break-word;" Padding="1em 2em">
+                <Literal ID="FailingReason" />
+              </Border>
+            </GridPanel>
+
+            <Border Style="display:none;" >
+              <Literal ID="ErrorDescription"/>
+            </Border>
+
+            <p style="margin: 0em;">For more information see the Sitecore log.</p>
+            <p style="margin: 1em 0em;">Try one of the following options:</p>
+
+            <Border RollOver="true" Class="scRollOver" Padding="2px" Click="CopyErrorMessage">
+              <ThemedImage Src="Applications/16x16/Copy.png" Width="16px" Height="16px" Align="absmiddle" Margin="0px 2px 0px 0px"/>
+              <Literal Text="Copy the error report to the clipboard"/>
+            </Border>
+
+            <Border RollOver="true" Class="scRollOver" Padding="2px" Click="RestartInstallation">
+              <ThemedImage Src="Applications/16x16/Refresh.png" Width="16px" Height="16px" Align="absmiddle" Margin="0px 2px 0px 0px"/>
+              <Literal Text="Retry the installation"/>
+            </Border>
+          </Border>
+
+          <Border ID="AbortMessage" Style="display:none;color:black;" Padding="0px 0px 0px 20px">
+            <Literal Text="Installation was aborted by user." />
+          </Border>
+          <Edit ID="integrationConfigItemIdHolder" Visible="false"/>
+        </WizardFormPadding>
+      </WizardFormPage>
+      <span class="tooltipForMappedField"></span>
+    </WizardForm>
+  </Sharepoint.IntegrationWizard>
+</control>

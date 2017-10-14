@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Sitecore.Sharepoint.Data.WebServices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointWebs_Webs" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss:2650/_vti_bin/webs.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointLists_Lists" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss:2650/_vti_bin/lists.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointSites_Sites" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss:2650/_vti_bin/sites.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_sitecore_sipSharepoint_Dws" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss:2650/_vti_bin/dws.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointCopy_Copy" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss:2650/_vti_bin/copy.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointAdmin_Admin" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss:2650/_vti_adm/admin.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointSiteData_SiteData" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss/_vti_bin/sitedata.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointVerions_Versions" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss/_vti_bin/versions.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointViews_Views" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss/_vti_bin/views.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointSearch_QueryService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sitecore-sipwss/_vti_bin/spsearch.asmx</Value>
+    </Setting>
+    <Setting Name="Sitecore_Sharepoint_Data_WebServices_SharepointMOSSSearch_QueryService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://devsp1ua1/_vti_bin/search.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

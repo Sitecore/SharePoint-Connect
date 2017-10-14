@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sitecore.Sharepoint.Data.Providers</RootNamespace>
+    <AssemblyName>Sitecore.Sharepoint.Data.Providers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Intranet|AnyCPU'">
+    <OutputPath>bin\Release Intranet\</OutputPath>
+    <DefineConstants>Intranet</DefineConstants>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sitecore.Intranet">
+      <HintPath>$(SolutionDir)components\Sitecore.Intranet.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Intranet.DraftMode">
+      <HintPath>$(SolutionDir)components\Sitecore.Intranet.DraftMode.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>$(SolutionDir)components\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\CacheableData.cs" />
+    <Compile Include="Cache\CacheableIntegrationConfigData.cs" />
+    <Compile Include="Cache\CacheableIntegrationItemInfo.cs" />
+    <Compile Include="Cache\IntegrationCache.cs" />
+<<<<<<< HEAD
+    <Compile Include="Pipelines\SynchronizeTree\Common\CreateIntegrationItemAction.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Common\CreateSharepointItemAction.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Common\DeleteIntegrationItemAction.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Common\DeleteSharepointItemAction.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Common\IDTableProvider.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Common\SyncAction.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Common\SyncActionFactory.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Common\SyncActionFactoryBase.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Common\UpdateSharepointItemAction.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Common\UpdateIntegrationItemAction.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Processors\ExecuteActions.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Processors\GetSharepointItemList.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Processors\GetSitecoreItemList.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Processors\MergeLists.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Processors\SharepointListsProvider.cs" />
+=======
+    <Compile Include="ProcessTreeRemoteEvent.cs" />
+    <Compile Include="RemoteProcessTreeEventHandler.cs" />
+>>>>>>> main_instance_remote_event
+    <Compile Include="SpDataContextProvider.cs" />
+    <Compile Include="IntegrationConfig\IntegrationConfigData.cs" />
+    <Compile Include="IntegrationConfig\IntegrationConfigDataProvider.cs" />
+    <Compile Include="IntegrationDisabler.cs" />
+    <Compile Include="IntegrationItemProvider.cs" />
+    <Compile Include="ItemProvider.cs" />
+    <Compile Include="Items\IntegrationItem.cs" />
+    <Compile Include="Logging\LogMessageFormatter.cs" />
+    <Compile Include="Options\ProcessIntegrationItemsOptions.cs" />
+    <Compile Include="Pipelines\PipelineNames.cs" />
+    <Compile Include="Pipelines\ProcessIntegrationItem\Common\Args\ProcessIntegrationItemArgs.cs" />
+    <Compile Include="Pipelines\ProcessIntegrationItem\Common\EventSender.cs" />
+    <Compile Include="Pipelines\ProcessIntegrationItem\Common\Processors\GetItem.cs" />
+    <Compile Include="Pipelines\ProcessIntegrationItem\Common\Processors\IsLocked.cs" />
+    <Compile Include="Pipelines\ProcessIntegrationItem\Common\Processors\UpdateBlob.cs" />
+    <Compile Include="Pipelines\ProcessIntegrationItem\Common\Processors\UpdateFields.cs" />
+    <Compile Include="Pipelines\ProcessIntegrationItem\Create\Processors\CreateItem.cs" />
+    <Compile Include="Pipelines\ProcessIntegrationItem\Create\Processors\GetTemplate.cs" />
+    <Compile Include="Pipelines\ProcessIntegrationItem\Delete\Processors\DeleteItem.cs" />
+    <Compile Include="Pipelines\DeleteSharepointItems.cs" />
+    <Compile Include="Pipelines\DisableSharepointProvider.cs" />
+    <Compile Include="Pipelines\ProcessSharepointItem\Common\Args\ProcessSharepointItemArgs.cs" />
+    <Compile Include="Pipelines\ProcessSharepointItem\Common\Processors\GetItem.cs" />
+    <Compile Include="Pipelines\ProcessSharepointItem\Common\Processors\IsBidirectionalLink.cs" />
+    <Compile Include="Pipelines\ProcessSharepointItem\Common\Processors\IsCheckedOut.cs" />
+    <Compile Include="Pipelines\ProcessSharepointItem\Create\Processors\CreateItem.cs" />
+    <Compile Include="Pipelines\ProcessSharepointItem\Delete\Processors\DeleteItem.cs" />
+    <Compile Include="Pipelines\ProcessSharepointItem\Update\Processors\ResetIntegrationItem.cs" />
+    <Compile Include="Pipelines\ProcessSharepointItem\Update\Processors\UpdateItem.cs" />
+    <Compile Include="Pipelines\Runners\IntegrationPipelinesRunner.cs" />
+    <Compile Include="Pipelines\Runners\PipelineRunner.cs" />
+    <Compile Include="Pipelines\Runners\TranslateSynchValuePipelinesRunner.cs" />
+    <Compile Include="Pipelines\TranslateIntegrationValue\Args\TranslateIntegrationValueArgs.cs" />
+    <Compile Include="Pipelines\TranslateIntegrationValue\Processors\CopySourceValue.cs" />
+    <Compile Include="Pipelines\TranslateSharepointValue\Processors\CopySourceValue.cs" />
+    <Compile Include="Pipelines\TranslateSharepointValue\Processors\TranslateDateToIsoDate.cs" />
+    <Compile Include="Pipelines\TranslateSharepointValue\Args\TranslateSharepointValueArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\CustomAssemblyInfo.cs" />
+    <Compile Include="SharepointItemProvider.cs" />
+    <Compile Include="SharepointProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SpDataContext.cs" />
+    <Compile Include="SynchContext.cs" />
+    <Compile Include="SynchDisabler.cs" />
+    <Compile Include="Pipelines\SynchronizeTree\Args\SynchronizeTreeArgs.cs" />
+    <Compile Include="Tasks\ScheduledBlobTransfer.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Sharepoint.Common\Sitecore.Sharepoint.Common.csproj">
+      <Project>{796946DA-26DA-450B-BBD0-03D581070D15}</Project>
+      <Name>Sitecore.Sharepoint.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.Sharepoint.ObjectModel\Sitecore.Sharepoint.ObjectModel.csproj">
+      <Project>{1F48B81C-1A39-45FA-9F62-DBBF968DB312}</Project>
+      <Name>Sitecore.Sharepoint.ObjectModel</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pipelines\ProcessIntegrationItem\Update\Processors\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

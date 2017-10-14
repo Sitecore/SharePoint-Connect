@@ -1,0 +1,131 @@
+fieldset {
+  border-width: 2px;
+}
+
+fieldset legend {
+  border-width: 0px;
+}
+
+#listSelector, #viewSelector   {
+    margin: 10px 0 0 0;
+}
+
+.examplesListBlock {
+  margin-left: 2px;
+  margin-top: 5px;
+}
+
+.configurationBlock {
+  margin-top: 15px;
+}
+
+#predefinedConfigurationInfo img, #notPredefinedConfigurationInfo img {
+  height: 24px;
+  width: 24px;
+  float: left;
+  margin: 5px 5px 23px 5px;
+}
+
+#alternativeCredentialsBlock {
+    padding: 0px 0px 0px 20px!important;
+}
+
+.scButton#Test  {
+    margin-left: 5px;
+    margin-top: 2px;
+    float: right;
+}
+
+#mappingInfoPanel td {
+    width: 50%!important;
+    padding: 0 2px!important;
+}
+
+.mappingsInfoLabel    {
+    margin-left: 10px;
+}
+
+.charCounter  {
+    background: #ffe;
+    float: left;
+    visibility: hidden;
+}
+
+.mappingContainerWrapper {
+    height: 80%;
+    overflow: auto;
+}
+
+.tooltipForMappedField    {
+    background: #ffe;
+    border: 1px solid #ccc;
+    padding: 0 3px;
+    width: auto;
+    height: 24px;
+    line-height: 24px;
+    position: absolute;
+    display: none;
+}
+
+.fields {
+    margin: 4px 40px 4px 0;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.fieldWrapper   {
+    width: 49.9%;
+    float: left;
+    margin: 0;
+}
+
+.spField, .scField   {
+    width: 98%;
+}
+
+.icons  {
+    width: 40px;
+    height: 22px;
+    float: right;
+    clear: right;
+}
+
+.asterisk   {
+    text-align: center;
+    width: 20px;
+    float: left;
+    margin-top: 6px;
+    display: none;
+}
+
+.icoDelete  {
+    margin: 3px 4px 0 0;
+    float: right;
+}
+
+.scFieldExample {
+    display: block;
+    margin-top: 5px;
+}
+.configurationResult {
+  margin-top: 5px;
+}
+.configurationResult  > tbody > tr > td:first-child,
+.confirmation  > tbody > tr > td:first-child {
+  padding-left: 0px
+}
+.configurationResult td, .confirmation td{
+  padding-left: 5px;
+}
+.confirmation > tbody > tr:first-child td{
+  padding-top: 0px;
+}
+.confirmation td {
+  padding-top: 10px;
+}
+.advancedSettings {
+  width: 100%;
+}
+.advancedSettings td input {
+  margin-top: 8px;
+}

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense" xmlns:sc="sitecore">
+  <Sharepoint.MappingEntry def:inherits="Sitecore.Sharepoint.Web.Shell.Applications.IntegrationWizard.MappingEntryControl,Sitecore.Sharepoint.Web">
+    <Border def:id="key">
+      <Border Class="icons" def:id="vmContainer" >
+        <Border Class="asterisk" def:id="validationMark" InnerHtml="*" RenderAs="WebControl" />
+        <ImageButton Class="icoDelete" RollOver="false" def:id="removeField" Width="16" Height="16" Src="/~/icon/Office/16x16/delete.png.aspx" Alt="Click to remove this mapping" Tooltip="Click to remove this mapping" RenderAs="WebControl" />
+      </Border>
+      <Border Class="fields" >
+        <Border Class="fieldWrapper">
+          <Combobox def:id="sharepointField" Class="spField" Multiple="false" />
+        </Border>
+        <Border Class="fieldWrapper">
+          <Edit def:id="sitecoreFieldName" Class="scField" Change="entry:SitecoreNameChange" />
+        </Border>
+      </Border>
+    </Border>
+  </Sharepoint.MappingEntry>
+</control>

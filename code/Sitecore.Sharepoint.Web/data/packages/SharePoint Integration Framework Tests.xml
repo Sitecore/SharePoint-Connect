@@ -1,0 +1,69 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>SharePoint Integration Framework Tests</PackageName>
+      <Author>Sitecore A/S</Author>
+      <Version>1.0.0 rev. 110630</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme />
+      <Publisher>Sitecore A/S</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xfiles>
+      <Entries>
+        <x-item>/bin/AllSharePointsSupport.Generator.SpecflowPlugin.dll</x-item>
+        <x-item>/bin/chromedriver.exe</x-item>
+        <x-item>/bin/FluentAssertions.dll</x-item>
+        <x-item>/bin/Gherkin.dll</x-item>
+        <x-item>/bin/HelperWebService.dll</x-item>
+        <x-item>/bin/Interop.SHDocVw.dll</x-item>
+        <x-item>/bin/Sitecore.Sharepoint.Tests.Acceptance.dll.config</x-item>
+        <x-item>/bin/Sitecore.Sharepoint.Tests.Acceptance.dll</x-item>
+        <x-item>/bin/Sitecore.Tests.Environment.Core.dll</x-item>
+        <x-item>/bin/Sitecore.Tests.Environment.SpecFlow.dll</x-item>
+        <x-item>/bin/TechTalk.SpecFlow.dll</x-item>
+        <x-item>/bin/TechTalk.SpecFlow.Generator.dll</x-item>
+        <x-item>/bin/TechTalk.SpecFlow.Parser.dll</x-item>
+        <x-item>/bin/TechTalk.SpecFlow.Utils.dll</x-item>
+        <x-item>/bin/UTF.dll</x-item>
+        <x-item>/bin/WebDriver.dll</x-item>
+        <x-item>/bin/xunit.dll</x-item>
+        <x-item>/bin/xunit.extensions.dll</x-item>
+        <x-item>/HelperWebService.asmx</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>BinFolder</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
