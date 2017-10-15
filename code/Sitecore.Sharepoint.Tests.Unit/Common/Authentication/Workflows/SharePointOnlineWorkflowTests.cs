@@ -7,6 +7,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+
+
 namespace Sitecore.Sharepoint.Tests.Unit.Common.Authentication.Workflows
 {
   using System;
@@ -15,11 +17,12 @@ namespace Sitecore.Sharepoint.Tests.Unit.Common.Authentication.Workflows
   using FluentAssertions;
   using NSubstitute;
 
-  using Ploeh.AutoFixture.Xunit;
+  using Ploeh.AutoFixture.Xunit2;
 
   using Sitecore.Sharepoint.Common.Authentication.Workflows;
   using Sitecore.Sharepoint.Common.Authentication.Workflows.Helpers;
-  using Xunit.Extensions;
+  using Xunit;
+    using Xunit.Extensions;
 
   public class SharePointOnlineWorkflowTests : WorkflowTestsBase
   {

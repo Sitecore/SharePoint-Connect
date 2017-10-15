@@ -14,7 +14,7 @@ namespace Sitecore.Sharepoint.Tests.Unit.Data.Providers
 
   using NSubstitute;
 
-  using Ploeh.AutoFixture.Xunit;
+  using Ploeh.AutoFixture.Xunit2;
 
   using Sitecore.Abstractions;
   using Sitecore.Data;

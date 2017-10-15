@@ -11,7 +11,7 @@ namespace Sitecore.Sharepoint.Tests.Unit.Common.Configuration
 {
   using FluentAssertions;
 
-  using Ploeh.AutoFixture.Xunit;
+  using Ploeh.AutoFixture.Xunit2;
 
   using Sitecore.Configuration;
 

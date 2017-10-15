@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Sharepoint.Data.WebServices", "Sitecore.Sharepoint.Data.WebServices\Sitecore.Sharepoint.Data.WebServices.csproj", "{A6E3B377-B783-4938-B828-2F20A2CCF61D}"
 EndProject
@@ -26,32 +26,32 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A6E3B377-B783-4938-B828-2F20A2CCF61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6E3B377-B783-4938-B828-2F20A2CCF61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6E3B377-B783-4938-B828-2F20A2CCF61D}.Release Intranet|Any CPU.ActiveCfg = Release Intranet|Any CPU
-		{A6E3B377-B783-4938-B828-2F20A2CCF61D}.Release Intranet|Any CPU.Build.0 = Release Intranet|Any CPU
+		{A6E3B377-B783-4938-B828-2F20A2CCF61D}.Release Intranet|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E3B377-B783-4938-B828-2F20A2CCF61D}.Release Intranet|Any CPU.Build.0 = Release|Any CPU
 		{A6E3B377-B783-4938-B828-2F20A2CCF61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6E3B377-B783-4938-B828-2F20A2CCF61D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1F48B81C-1A39-45FA-9F62-DBBF968DB312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F48B81C-1A39-45FA-9F62-DBBF968DB312}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F48B81C-1A39-45FA-9F62-DBBF968DB312}.Release Intranet|Any CPU.ActiveCfg = Release Intranet|Any CPU
-		{1F48B81C-1A39-45FA-9F62-DBBF968DB312}.Release Intranet|Any CPU.Build.0 = Release Intranet|Any CPU
+		{1F48B81C-1A39-45FA-9F62-DBBF968DB312}.Release Intranet|Any CPU.ActiveCfg = Release|Any CPU
+		{1F48B81C-1A39-45FA-9F62-DBBF968DB312}.Release Intranet|Any CPU.Build.0 = Release|Any CPU
 		{1F48B81C-1A39-45FA-9F62-DBBF968DB312}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F48B81C-1A39-45FA-9F62-DBBF968DB312}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F0298803-1B1F-4E98-978F-35F2362EC0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F0298803-1B1F-4E98-978F-35F2362EC0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0298803-1B1F-4E98-978F-35F2362EC0FD}.Release Intranet|Any CPU.ActiveCfg = Release Intranet|Any CPU
-		{F0298803-1B1F-4E98-978F-35F2362EC0FD}.Release Intranet|Any CPU.Build.0 = Release Intranet|Any CPU
+		{F0298803-1B1F-4E98-978F-35F2362EC0FD}.Release Intranet|Any CPU.ActiveCfg = Release|Any CPU
+		{F0298803-1B1F-4E98-978F-35F2362EC0FD}.Release Intranet|Any CPU.Build.0 = Release|Any CPU
 		{F0298803-1B1F-4E98-978F-35F2362EC0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0298803-1B1F-4E98-978F-35F2362EC0FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}.Release Intranet|Any CPU.ActiveCfg = Release Intranet|Any CPU
-		{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}.Release Intranet|Any CPU.Build.0 = Release Intranet|Any CPU
+		{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}.Release Intranet|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}.Release Intranet|Any CPU.Build.0 = Release|Any CPU
 		{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}.Release|Any CPU.Build.0 = Release|Any CPU
 		{796946DA-26DA-450B-BBD0-03D581070D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{796946DA-26DA-450B-BBD0-03D581070D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{796946DA-26DA-450B-BBD0-03D581070D15}.Release Intranet|Any CPU.ActiveCfg = Release Intranet|Any CPU
-		{796946DA-26DA-450B-BBD0-03D581070D15}.Release Intranet|Any CPU.Build.0 = Release Intranet|Any CPU
+		{796946DA-26DA-450B-BBD0-03D581070D15}.Release Intranet|Any CPU.ActiveCfg = Release|Any CPU
+		{796946DA-26DA-450B-BBD0-03D581070D15}.Release Intranet|Any CPU.Build.0 = Release|Any CPU
 		{796946DA-26DA-450B-BBD0-03D581070D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{796946DA-26DA-450B-BBD0-03D581070D15}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F6FE413-019B-4F8C-B404-F2E7864F55BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

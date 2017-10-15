@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project> 
+    <PropertyGroup>
+        <Product>SharePoint Integration Framework 1.0.0 rev. $([System.DateTime]::Now.ToString('yy'))$([System.DateTime]::Now.ToString('MM'))$([System.DateTime]::Now.ToString('dd'))</Product>
+        <Title>SharePoint Integration Framework</Title>
+        <PackageProjectUrl>https://github.com/Sitecore/SharePoint-Connect</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Sitecore/SharePoint-Connect/blob/master/LICENSE.md</PackageLicenseUrl>
+        <PackageIconUrl>https://mygetwwwsitecoreeu.blob.core.windows.net/feedicons/sc-packages.png</PackageIconUrl>
+        <Description></Description>
+        <Company>Sitecore Corporation A/S</Company>
+        <Authors>Sitecore Corporation A/S</Authors>
+        <Copyright>&#169; $([System.DateTime]::Now.ToString('yyyy')) Sitecore Corporation A/S. All rights reserved. Sitecore&#174; is a registered trademark of Sitecore Corporation A/S.</Copyright>
+        <Version>1.0.$([System.DateTime]::Now.ToString('yy'))$([System.DateTime]::Now.ToString('MM'))$([System.DateTime]::Now.ToString('dd'))</Version>
+        <PackageVersion>1.0.$([System.DateTime]::Now.ToString('yy'))$([System.DateTime]::Now.ToString('MM'))$([System.DateTime]::Now.ToString('dd'))</PackageVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
+        <InformationalVersion>1.0.0 rev. $([System.DateTime]::Now.ToString('yy'))$([System.DateTime]::Now.ToString('MM'))$([System.DateTime]::Now.ToString('dd'))</InformationalVersion>
+    </PropertyGroup>
+</Project>

@@ -15,7 +15,7 @@ namespace Sitecore.Sharepoint.Tests.Unit.Data.Providers.Pipelines.GetItem
 
   using NSubstitute;
 
-  using Ploeh.AutoFixture.Xunit;
+  using Ploeh.AutoFixture.Xunit2;
 
   using Sitecore.Data;
   using Sitecore.Data.Items;

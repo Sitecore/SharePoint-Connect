@@ -1,85 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{133D7440-8F37-4D6D-800B-2930FABE72B8}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sitecore.Sharepoint.Tests.Unit</RootNamespace>
+    <TargetFramework>net452</TargetFramework>
     <AssemblyName>Sitecore.Sharepoint.Tests.Unit</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <PackageId>Sitecore.Sharepoint.Tests.Unit</PackageId>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentAssertions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentAssertions.2.1.0.0\lib\net45\FluentAssertions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.1.0.2\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.2\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NSubstitute, Version=1.6.1.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
-      <HintPath>..\packages\NSubstitute.1.6.1.0\lib\NET40\NSubstitute.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Ploeh.AutoFixture, Version=3.40.0.0, Culture=neutral, PublicKeyToken=b24654c590009d4f, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoFixture.3.40.0\lib\net40\Ploeh.AutoFixture.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Ploeh.AutoFixture.Xunit, Version=3.40.0.0, Culture=neutral, PublicKeyToken=b24654c590009d4f, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoFixture.Xunit.3.40.0\lib\net40\Ploeh.AutoFixture.Xunit.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Sitecore.Abstractions, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Abstractions.NoReferences.8.2.170728\lib\NET452\Sitecore.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Client, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Client.NoReferences.8.2.170728\lib\NET452\Sitecore.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.2.170728\lib\NET452\Sitecore.Kernel.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Logging, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Logging.NoReferences.8.2.170728\lib\NET452\Sitecore.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Logging.Client, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Logging.Client.NoReferences.8.2.170728\lib\NET452\Sitecore.Logging.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Nexus, Version=1.0.4430.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Nexus.NoReferences.8.2.170728\lib\NET452\Sitecore.Nexus.dll</HintPath>
-    </Reference>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoFixture" Version="3.51.0" />
+    <PackageReference Include="AutoFixture.Xunit2" Version="3.51.0" />
+    <PackageReference Include="FluentAssertions" Version="4.19.4" />
+    <PackageReference Include="NSubstitute" Version="2.0.3" />
+    <PackageReference Include="xunit" Version="2.3.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.0">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -89,112 +27,12 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit, Version=1.9.2.1705, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="xunit.extensions, Version=1.9.2.1705, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\packages\xunit.extensions.1.9.2\lib\net20\xunit.extensions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ItemMockExtensions.cs">
-      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
-    </Compile>
-    <Compile Include="TestAuthenticationManager.cs" />
-    <Compile Include="Common\Authentication\Workflows\Helpers\TokenGetterTests.cs" />
-    <Compile Include="Common\Authentication\Workflows\SharePointOnlineWorkflowTests.cs" />
-    <Compile Include="Common\Caches\CookieContainerCacheTests.cs" />
-    <Compile Include="Common\Configuration\ServerEntryCollectionTests.cs" />
-    <Compile Include="Data.Providers\IntegrationConfig\IntegrationConfigDataProviderTests.cs" />
-    <Compile Include="Data.Providers\IntegrationItemProviderTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\Create\Processors\ResolveExtensionTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\GetChildren\GetChildrenTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\GetItem\GetItemTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\ProcessIntegrationItem\Common\Processors\GetItemTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\Runners\IntegrationPipelinesRunnerTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\SynchronizeTree\Helpers\HistoryProviderIDTableTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\SynchronizeTree\Processors\ExecuteActionsTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\SynchronizeTree\Processors\GetSharepointItemListTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\SynchronizeTree\Processors\GetSitecoreItemListTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\SynchronizeTree\Processors\IsActiveTreeTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\SynchronizeTree\Processors\IsIntegrationInstanceTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\SynchronizeTree\Processors\MergeListsTests.cs" />
-    <Compile Include="Data.Providers\Pipelines\SynchronizeTree\Processors\UpdateExpirationIntervalTests.cs" />
-    <Compile Include="Data.Providers\SharepointProviderTests.cs" />
-    <Compile Include="Data.Providers\SpContextProviderBaseTests.cs" />
-    <Compile Include="Data.Providers\SpDataContextProviderTests.cs" />
-    <Compile Include="Data.Providers\SyncActions\ComparableActions\ComparableCreateIntegrationItemAction.cs" />
-    <Compile Include="Data.Providers\SyncActions\ComparableActions\ComparableCreateSharepointItemAction.cs" />
-    <Compile Include="Data.Providers\SyncActions\ComparableActions\ComparableDeleteIntegrationItemAction.cs" />
-    <Compile Include="Data.Providers\SyncActions\ComparableActions\ComparableDeleteSharepointItemAction.cs" />
-    <Compile Include="Data.Providers\SyncActions\ComparableActions\ComparableSyncActionFactory.cs" />
-    <Compile Include="Data.Providers\SyncActions\ComparableActions\ComparableUpdateIntegrationItemAction.cs" />
-    <Compile Include="Data.Providers\SyncActions\ComparableActions\ComparableUpdateSharepointItemAction.cs" />
-    <Compile Include="Data.Providers\SyncActions\CreateIntegrationItemActionTests.cs" />
-    <Compile Include="Data.Providers\SyncActions\CreateSharepointItemActionTests.cs" />
-    <Compile Include="Data.Providers\SyncActions\DeleteIntegrationItemActionTests.cs" />
-    <Compile Include="Data.Providers\SyncActions\DeleteSharepointItemActionTests.cs" />
-    <Compile Include="Data.Providers\SyncActions\SyncActionFactoryTests.cs" />
-    <Compile Include="Data.Providers\SyncActions\UpdateIntegrationItemActionTests.cs" />
-    <Compile Include="Data.Providers\SyncActions\UpdateSharepointItemActionTests.cs" />
-    <Compile Include="Data.WebServices\ConnectionConfigurations\ClaimsBasedConfigurationTests.cs" />
-    <Compile Include="Data.WebServices\ConnectionConfigurations\ClassicConnectionConfigurationTests.cs" />
-    <Compile Include="Data.WebServices\ConnectionConfigurations\ConnectionConfigurationsDefaultsTests.cs" />
-    <Compile Include="Data.WebServices\ConnectionConfigurationsFactoryTests.cs" />
-    <Compile Include="Common\Authentication\Workflows\ADFSWorkflowTests.cs" />
-    <Compile Include="Common\Authentication\Workflows\LegacySharePointOnlineWorkflowTests.cs" />
-    <Compile Include="Common\Authentication\Workflows\WorkflowsDefaultsTests.cs" />
-    <Compile Include="Common\Authentication\Workflows\WorkflowTestsBase.cs" />
-    <Compile Include="EventWatcher.cs" />
-    <Compile Include="GenericKeyValurPairCollection.cs" />
-    <Compile Include="ItemIsContentItem.cs" />
-    <Compile Include="PipelineMock.cs" />
-    <Compile Include="SitecoreExtensions.cs" />
-    <Compile Include="LogWatcher.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Common\Configuration\SettingsTests.cs" />
-    <Compile Include="ServerEntrieCollectionSubstitute.cs" />
-    <Compile Include="TestEventManager.cs" />
-    <Compile Include="TestHelper.cs" />
-    <Compile Include="ItemMock.cs" />
+    <ProjectReference Include="..\Sitecore.Sharepoint.Common\Sitecore.Sharepoint.Common.csproj" />
+    <ProjectReference Include="..\Sitecore.Sharepoint.Data.Providers\Sitecore.Sharepoint.Data.Providers.csproj" />
+    <ProjectReference Include="..\Sitecore.Sharepoint.Data.WebServices\Sitecore.Sharepoint.Data.WebServices.csproj" />
+    <ProjectReference Include="..\Sitecore.Sharepoint.ObjectModel\Sitecore.Sharepoint.ObjectModel.csproj" />
+    <ProjectReference Include="..\Sitecore.Sharepoint.Web\Sitecore.Sharepoint.Web.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sitecore.Sharepoint.Common\Sitecore.Sharepoint.Common.csproj">
-      <Project>{796946DA-26DA-450B-BBD0-03D581070D15}</Project>
-      <Name>Sitecore.Sharepoint.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sitecore.Sharepoint.Data.Providers\Sitecore.Sharepoint.Data.Providers.csproj">
-      <Project>{DBA047E1-D1C7-48C9-B82F-C6F07AEC5C17}</Project>
-      <Name>Sitecore.Sharepoint.Data.Providers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sitecore.Sharepoint.Data.WebServices\Sitecore.Sharepoint.Data.WebServices.csproj">
-      <Project>{A6E3B377-B783-4938-B828-2F20A2CCF61D}</Project>
-      <Name>Sitecore.Sharepoint.Data.WebServices</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sitecore.Sharepoint.ObjectModel\Sitecore.Sharepoint.ObjectModel.csproj">
-      <Project>{1f48b81c-1a39-45fa-9f62-dbbf968db312}</Project>
-      <Name>Sitecore.Sharepoint.ObjectModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sitecore.Sharepoint.Web\Sitecore.Sharepoint.Web.csproj">
-      <Project>{f0298803-1b1f-4e98-978f-35f2362ec0fd}</Project>
-      <Name>Sitecore.Sharepoint.Web</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
