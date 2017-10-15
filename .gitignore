@@ -304,6 +304,11 @@ __pycache__/
 # OpenCover UI analysis results
 OpenCover/
 
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 # Sitecore
-!/Data/packages/Microsoft Dynamics CRM Security Provider.xml
-/code/CRMSecurityProvider.Test/data/logs/**
+

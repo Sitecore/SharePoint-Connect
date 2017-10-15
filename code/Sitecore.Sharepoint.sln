@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Sharepoint.Data.WebServices", "Sitecore.Sharepoint.Data.WebServices\Sitecore.Sharepoint.Data.WebServices.csproj", "{A6E3B377-B783-4938-B828-2F20A2CCF61D}"
 EndProject
@@ -16,12 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Sharepoint.Installer", "Sitecore.Sharepoint.Installer\Sitecore.Sharepoint.Installer.csproj", "{9F6FE413-019B-4F8C-B404-F2E7864F55BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Sharepoint.Tests.Unit", "Sitecore.Sharepoint.Tests.Unit\Sitecore.Sharepoint.Tests.Unit.csproj", "{133D7440-8F37-4D6D-800B-2930FABE72B8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{266B8760-BFE5-44BD-93AD-566E98F1C5EF}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
