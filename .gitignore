@@ -311,4 +311,5 @@ OpenCover/
 !.vscode/extensions.json
 
 # Sitecore
+!/Data/packages/*.xml
 
