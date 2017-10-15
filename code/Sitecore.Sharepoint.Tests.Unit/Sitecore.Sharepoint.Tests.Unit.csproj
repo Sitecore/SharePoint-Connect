@@ -181,6 +181,10 @@
       <Project>{1f48b81c-1a39-45fa-9f62-dbbf968db312}</Project>
       <Name>Sitecore.Sharepoint.ObjectModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sitecore.Sharepoint.Web\Sitecore.Sharepoint.Web.csproj">
+      <Project>{f0298803-1b1f-4e98-978f-35f2362ec0fd}</Project>
+      <Name>Sitecore.Sharepoint.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
@@ -194,4 +198,3 @@
   </Target>
   -->
 </Project>
-
