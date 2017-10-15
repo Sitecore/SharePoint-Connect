@@ -133,6 +133,9 @@
     <Content Include="layouts\Sharepoint\SharepointTasks.ascx" />
     <Content Include="layouts\Sharepoint\SharepointList.ascx" />
     <Content Include="sitecore\admin\UpdateIntegrationConfigData.aspx" />
+    <Content Include="sitecore\Images\disableScreen.png" />
+    <Content Include="sitecore\Images\fader.png" />
+    <Content Include="sitecore\Images\gridheadbg_blue.png" />
     <Content Include="sitecore\shell\Applications\Sharepoint\Integration Wizard\IntegrationWizardForm.css" />
     <Content Include="sitecore\shell\Applications\Sharepoint\Integration Wizard\IntegrationWizardForm.js" />
     <Content Include="sitecore\shell\Applications\Sharepoint\Integration Wizard\IntegrationWizardForm.xml">
@@ -228,4 +231,3 @@
     </PreBuildEvent>
   </PropertyGroup>
 </Project>
-
